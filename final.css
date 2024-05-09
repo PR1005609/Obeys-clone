@@ -1,97 +1,155 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    font-family: 'Plain Light';
-    color: #fff;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Plain Light";
+  color: #fff;
 }
 html, body {
   height: 100%;
   width: 100%;
 }
-#main{
-   position: relative;
-   background-color: #030303;
+
+#crsr{
+    width: 2.7vw;
+    height: 2.7vw;
+    border-radius: 50%;
  
-}
-#loader{
-      height: 100%;
-       width: 100%;
-    background-color: #030303;
     position: fixed;
-    z-index: 999;   
-    padding: 25vh 10vw;
+    z-index: 9999;
+    border: 1.5px solid rgba(255, 255, 255, 0.627);
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
     
 }
-.line{
-    height: fit-content;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-   justify-content: flex-start;
-   gap: 3vw;
+#main {
+  position: relative;
+  background-color: #030303;
+}
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: #030303;
+  position: fixed;
+  z-index: 999;
+  padding: 25vh 10vw;
+}
+.line {
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3vw;
 }
 
-.line h1{
-      font-size: 6.5vw;
-      font-weight: 900;
-      text-transform: uppercase;
+.line h1 {
+  font-size: 6.5vw;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 @keyframes anime {
-    0%{
-        font-family: "Plain light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 0;
-    }
-    47%{
-        font-family: "Plain light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 0;
-    }
-    50%{ 
-        font-family: "silky serif";
-        -webkit-text-stroke: 1px #fff; 
-     color: transparent;   
-     font-weight: 900;
-     opacity: 1;
+  0% {
+    font-family: "Plain light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
   }
-    100%{ 
-           font-family: "silky serif";
-           -webkit-text-stroke: 1px #fff; 
-        color: transparent;   
-        font-weight: 900;
-        opacity: 0;
-     }
+  47% {
+    font-family: "Plain light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+  }
+  50% {
+    font-family: "silky serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1;
+  }
+  100% {
+    font-family: "silky serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 900;
+    opacity: 0;
+  }
 }
-.line h2{
-    font-size: 5vw;
-    text-transform: uppercase;
-    animation-name: anime;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+.line h2 {
+  font-size: 5vw;
+  text-transform: uppercase;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
-#line-part1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
+#line-part1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
 }
-#line-part1 h4,#line-part1 h5{
-   font-family: "silk serif";
-    font-size: 4vw;
-
+#line-part1 h4,
+#line-part1 h5 {
+  font-family: "silk serif";
+  font-size: 4vw;
 }
-#line-part1 h4{
-    width: 6vw;
+#line-part1 h4 {
+  width: 6vw;
   text-align: right;
 }
 
-#page1{
-    height: 100vh;
-    width: 100%;
-    background-color:#151515;
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
 }
+#page1 #nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4vw 5.5vw;
+}
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+#nav-part2 h4 {
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.hero {
+  margin-left: 30%;
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+}
+.hero:nth-child(2) {
+  margin-top: 16vh;
+}
+.hero h1{
+  font-size: 6vw;
+  line-height: 6vw;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.hero h2{
+     font-size: 6vw;
+    line-height: 6vw;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .hero h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 500;
+  }
